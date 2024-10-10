@@ -6,13 +6,8 @@ pipeline{
 
     stages{
         stage('SAST'){
-            steps{
-                sh 'echo hook up a sast tool'
-            }
+        }
         stage('SonarQube'){
-            steps{
-                sh 'echo hook up Sonar'
-            }
         }
            stage('InstallDeps'){
             steps{
