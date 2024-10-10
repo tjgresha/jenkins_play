@@ -6,9 +6,8 @@ pipeline{
 
     stages{
         stage('Python UnitTest'){
-       
             withPythonEnv('python3'){
-                sh 'pip install pytest'
+            sh 'pip install pytest'
                 sh 'python3 -m pytest tests'
             }
         }
