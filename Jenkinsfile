@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent python
     options {
         timeout(time:30, unit: 'SECONDS')
     }
