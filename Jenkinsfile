@@ -5,7 +5,7 @@ pipeline{
     }
 
     stages{
-        stage('SAST'){}
+        stage('SAST'){
             steps{
                 sh 'echo hook up a sast tool'
             }
