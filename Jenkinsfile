@@ -15,11 +15,6 @@ pipeline{
                 sh 'echo Sonar'
             }
         }
-           stage('InstallDeps'){
-            steps{
-                sh 'sudo apt install python3.12-venv'
-            }
-        }
         stage('PythonUnitTest'){
             steps{
                 withPythonEnv('python3'){
