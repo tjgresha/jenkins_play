@@ -19,9 +19,18 @@ pipeline{
             steps{
                 withPythonEnv('python3'){
                 sh 'pip install pytest'
+                sh 'pip install junit'    
                 sh 'python3 -m pytest tests --junitxml=./xmlReport/output.xml'
                 }
             }
+        }
+        stage('post'){
+            always {
+               junit 'xmlReport/output.xml'    
+            }
+        }
+        
+        
         }
     }
 }
