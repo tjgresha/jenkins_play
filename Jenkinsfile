@@ -24,13 +24,11 @@ pipeline{
                 }
             }
         }
-        stage('post'){
-            always {
-               junit 'xmlReport/output.xml'    
-            }
-        }
-        
-        
+    }
+    post{
+        always {
+            junit 'xmlReport/output.xml'    
         }
     }
+}
 
