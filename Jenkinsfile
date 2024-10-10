@@ -9,11 +9,11 @@ pipeline{
             steps{
                 sh 'echo hook up a sast tool'
             }
-        stage('SonarQube'){}
-            {steps{
+        stage('SonarQube'){
+            steps{
                 sh 'echo hook up Sonar'
             }
-            }
+        }
            stage('InstallDeps'){
             steps{
                 sh 'sudo apt install python3.12-venv'
