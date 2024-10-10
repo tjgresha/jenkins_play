@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('InstallDeps'){
             steps{
-                sh 'sudo apt install python3.12-venv'
+                sh 'apt install python3.12-venv'
             }
         }
         stage('PythonUnitTest'){
