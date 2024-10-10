@@ -5,10 +5,10 @@ pipeline{
     }
 
     stages{
-        stage('Python UnitTest'){
+        stage('PythonUnitTest'){
             withPythonEnv('python3'){
             sh 'pip install pytest'
-                sh 'python3 -m pytest tests'
+            sh 'python3 -m pytest tests'
             }
         }
     }
